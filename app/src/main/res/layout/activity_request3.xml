@@ -69,18 +69,18 @@
             android:maxLines="3"
             android:maxLength="150"/>
 
-        <TextView
-            android:id="@+id/tv_currency_request3"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:background="@drawable/bginput2"
-            android:padding="6dp"
-            android:paddingStart="@dimen/et_start"
-            android:text="IDR"
-            android:textColor="@color/colorHint"
-            android:textSize="22sp" />
+        <!--<TextView-->
+            <!--android:id="@+id/tv_currency_request3"-->
+            <!--android:layout_width="360dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:background="@drawable/bginput2"-->
+            <!--android:padding="6dp"-->
+            <!--android:paddingStart="@dimen/et_start"-->
+            <!--android:text="IDR"-->
+            <!--android:textColor="@color/colorHint"-->
+            <!--android:textSize="22sp" />-->
 
         <EditText
             android:id="@+id/et_amount_request3"

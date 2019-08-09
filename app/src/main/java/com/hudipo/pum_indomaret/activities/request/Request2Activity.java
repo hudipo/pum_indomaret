@@ -52,18 +52,8 @@ public class Request2Activity extends AppCompatActivity {
         ibtn_doc_detail_request2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //TODO: bikin validasi kalau doc type yg kepilih "-" tombol ga bisa diteken
-//                if (list.contains("-")) {
-//                    ibtn_doc_detail_request2.setEnabled(false);
-//                } else {
-//                    Intent intent = new Intent(Request2Activity.this, RequestDocument.class);
-//                    startActivity(intent);
-//                }
-
                 Intent intent = new Intent(Request2Activity.this, RequestDocument.class);
                 startActivity(intent);
-
             }
         });
 
@@ -71,10 +61,8 @@ public class Request2Activity extends AppCompatActivity {
         btn_next_request2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(Request2Activity.this, Request3Activity.class);
                 startActivity(intent);
-
             }
         });
 
@@ -93,11 +81,9 @@ public class Request2Activity extends AppCompatActivity {
         list.add("Permintaan Pembelian (PP)");
 
         spinnerColorChange = (Spinner) findViewById(R.id.sp_doc_request2);
-
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, R.layout.custom_textview_to_spinner, list);
         dataAdapter.setDropDownViewResource(R.layout.custom_textview_to_spinner);
         spinnerColorChange.setAdapter(dataAdapter);
-
 //        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 //        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list){
@@ -116,7 +102,6 @@ public class Request2Activity extends AppCompatActivity {
 //                return view;
 //            }
 //        };
-
         sp_doc_request2.setAdapter(dataAdapter);
         sp_doc_request2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

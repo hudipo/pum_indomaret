@@ -6,6 +6,7 @@ import com.hudipo.pum_indomaret.model.DefaultResponse;
 import com.hudipo.pum_indomaret.model.DepartmentResponse;
 import com.hudipo.pum_indomaret.model.DocumentsResponse;
 import com.hudipo.pum_indomaret.model.LoginResponse;
+import com.hudipo.pum_indomaret.model.TrxResponse;
 import com.hudipo.pum_indomaret.model.UsersResponse;
 
 import okhttp3.ResponseBody;
@@ -27,10 +28,6 @@ public interface Api {
             @Field("pin") String pin
     );
 
-    @POST("createpum")
-    Call<CreatePumResponse> createPum(CreatePum createPum);
-
-
     @FormUrlEncoded
     @POST("login")
     Call<LoginResponse> login(
@@ -38,11 +35,34 @@ public interface Api {
             @Field("password") String password
     );
 
+    @POST("createpum")
+    Call<CreatePumResponse> createPum(
+            @Field("emp_name") String emp_name,
+            @Field("emp_dept")String emp_dept,
+            @Field("use_date")String use_date,
+            @Field("resp_date")String resp_date,
+            @Field("doc_num")String doc_num,
+            @Field("trx_type")String trx_type,
+            @Field("description")String description,
+            @Field("currency")String currency,
+            @Field("amount")String amount,
+            @Field("amount")String upload_file
+
+    );
+
+//    @POST("doctype")
+//    Call<DocumentsResponse> getDocument(
+//            @Field("doc_type") String doc_type
+//    );
+
     @GET("documents")
     Call<DocumentsResponse> getDocument();
 
     @GET("getdept")
     Call<DepartmentResponse> getDepartments();
+
+    @GET("gettrxtype")
+    Call<TrxResponse> getTrx();
 
 
 

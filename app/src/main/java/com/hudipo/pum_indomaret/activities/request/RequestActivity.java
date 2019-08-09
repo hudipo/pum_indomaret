@@ -191,7 +191,7 @@ public class RequestActivity extends AppCompatActivity {
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("Quit ? ");
+        builder.setTitle("Discard  ? ");
         builder.setMessage("Are You Sure Back to Menu? ");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {

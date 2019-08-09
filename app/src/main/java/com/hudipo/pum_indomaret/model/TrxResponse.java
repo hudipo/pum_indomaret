@@ -2,14 +2,12 @@ package com.hudipo.pum_indomaret.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class DepartmentResponse {
+public class TrxResponse {
     private boolean error;
     @SerializedName("department")
     private Department[] departments;
 
-    public DepartmentResponse(boolean error, Department[] departments) {
+    public TrxResponse(boolean error, Department[] departments) {
         this.error = error;
         this.departments = departments;
     }

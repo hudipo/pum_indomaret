@@ -7,10 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
 
@@ -33,11 +29,11 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RequestDocument extends AppCompatActivity {
+public class RequestDocument extends AppCompatActivity{
 
     private RecyclerView rcv_doc_detail_port;
     private DocumentsAdapter adapter;
-   private ArrayList<Document> documentArrayList;
+    private ArrayList<Document> documentArrayList;
 
 
     @Override
@@ -57,7 +53,8 @@ public class RequestDocument extends AppCompatActivity {
 
 
 
-    private void loadJSON(){
+
+    private void loadJSON() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://jeffapi.hudipo.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -65,6 +62,7 @@ public class RequestDocument extends AppCompatActivity {
 
         Api api = retrofit.create(Api.class);
 //        Call<DocumentsResponse> call = RetrofitCliect.getInstance().getApi().getDocument();
+//        String strDocSelected = .getText().toString().trim();
         Call<DocumentsResponse> call = api.getDocument();
         call.enqueue(new Callback<DocumentsResponse>() {
             @Override
@@ -73,12 +71,11 @@ public class RequestDocument extends AppCompatActivity {
                 documentArrayList = new ArrayList<>(Arrays.asList(documentsResponse.getDocuments()));
                 adapter = new DocumentsAdapter(documentArrayList);
                 rcv_doc_detail_port.setAdapter(adapter);
-
             }
 
             @Override
             public void onFailure(Call<DocumentsResponse> call, Throwable t) {
-                Toast.makeText(RequestDocument.this,"Error Message",Toast.LENGTH_LONG).show();
+                Toast.makeText(RequestDocument.this, "Error Message", Toast.LENGTH_LONG).show();
             }
         });
     }

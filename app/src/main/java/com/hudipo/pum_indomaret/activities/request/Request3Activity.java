@@ -29,7 +29,7 @@ public class Request3Activity extends AppCompatActivity implements View.OnClickL
 
     Spinner sp_trx_request3;
     EditText et_description_request3;
-    TextView tv_currency_request3;
+//    TextView tv_currency_request3;
     EditText et_amount_request3;
     TextView tv_upload_request3;
     ImageButton ibtn_doc_detail_request3;
@@ -43,7 +43,7 @@ public class Request3Activity extends AppCompatActivity implements View.OnClickL
 
         sp_trx_request3 = findViewById(R.id.sp_trx_request3);
         et_description_request3 = findViewById(R.id.et_description_request3);
-        tv_currency_request3 = findViewById(R.id.tv_currency_request3);
+//        tv_currency_request3 = findViewById(R.id.tv_currency_request3);
         et_amount_request3 = findViewById(R.id.et_amount_request3);
         tv_upload_request3 = findViewById(R.id.tv_upload_request3);
         ibtn_doc_detail_request3 = findViewById(R.id.ibtn_doc_detail_request3);
